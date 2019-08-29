@@ -1,0 +1,44 @@
+{
+    "name": "serverdog/laratests",
+    "description": ":A Laravel package for scaffoling tests based on your routes.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andy Boulanger",
+            "email": "andy@iqala.com",
+            "homepage": "iqala.com"
+        }
+    ],
+    "homepage": "https://github.com/serverdog/laratests",
+    "keywords": ["Laravel", "laratests", "scaffold" ,"tests"],
+    "require": {
+        "laravel/framework": "^5.8.25",
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "serverdog\\laratests\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "serverdog\\laratests\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "serverdog\\laratests\\laratestsServiceProvider"
+            ],
+            "aliases": {
+                "laratests": "serverdog\\laratests\\Facades\\laratests"
+            }
+        }
+    }
+}
